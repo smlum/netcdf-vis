@@ -2,7 +2,7 @@
 
 `netcdf-vis` is a web application that extracts netCDF data and visualises it on a web map.
 
-Live demo: [https://samfredlumley.github.io/netcdf_vis/app/](https://samfredlumley.github.io/netcdf_vis/app/)
+Live demo: [https://samfredlumley.github.io/netcdf-vis/app/](https://samfredlumley.github.io/netcdf-vis/app/)
 
 
 ## Using the app
@@ -17,7 +17,7 @@ The overlays and basemaps can be toggled from a control panel in the top right.
 Clone the netcdf-vis repository <br>
 ```
 git clone https://github.com/samFredLumley/netcdf_vis
-cd netcdf_vis/app
+cd netcdf-vis/app
 ```
 The app must be run on a web server. For example, using [http-server](https://www.npmjs.com/package/http-server):  
 ```
@@ -34,7 +34,7 @@ To configure the app for custom netCDF data you must add the netCDF file to the 
 
 It may be preferable to work with the IPython Notebook file `netcdf2leaflet-velocity.ipynb` to use the step-by-step commented instructions. For example, using [Jupyter Notebook](http://jupyter.org/) run:
 ```
-cd netcdf_vis/app/data
+cd netcdf-vis/app/data
 jupyter notebook netcdf2leaflet-velocity.ipynb
 ```
 Running the python file will generate two files: `wind.json` and `temps_sm.js`, which are used as inputs for the web map.
@@ -47,7 +47,7 @@ The Leaflet map can be modified in `netcdf-vis.js`. Modifications to the Leaflet
 
 The demo app can be embedded into another webpage as an iframe:
 
-``<iframe src="https://samfredlumley.github.io/netcdf_vis/app/" width="600" height="400"></iframe>``
+``<iframe src="https://samfredlumley.github.io/netcdf-vis/app/" width="600" height="400"></iframe>``
 
 A custom version of the app could be embedded in a similar way.
 
