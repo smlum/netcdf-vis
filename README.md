@@ -64,6 +64,7 @@ Which themselves rely on:
 * [earth](https://github.com/cambecc/earth)
 
 ## Further work
+* Add instructions
 * Create user interface for netCDF extraction
 * Automate server side Python
 * Integrate [netCDF conventions](https://www.unidata.ucar.edu/software/netcdf/conventions.html)
