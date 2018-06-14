@@ -66,7 +66,7 @@ Which themselves rely on:
 ## Further work
 * Add instructions
 * Create user interface for netCDF extraction
-* Automate server side Python
+* Automate server side Python data processing from web app
 * Integrate [netCDF conventions](https://www.unidata.ucar.edu/software/netcdf/conventions.html)
 * Support time dimension
 * Support data streaming
