@@ -68,4 +68,5 @@ Which themselves rely on:
 * Automate server side Python
 * Integrate [netCDF conventions](https://www.unidata.ucar.edu/software/netcdf/conventions.html)
 * Support time dimension
+* Support data streaming
 * Explore other temperature visualisation options
