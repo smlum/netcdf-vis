@@ -2,7 +2,7 @@
 
 function initDemoMap(){
 
-    var Esri_WorldImagery = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+    var Esri_WorldImagery = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
         attribution: ''
     });
 
@@ -12,7 +12,7 @@ function initDemoMap(){
     //});
 
     var Esri_DarkGreyCanvas = L.tileLayer(
-        "http://{s}.sm.mapstack.stamen.com/" +
+        "https://{s}.sm.mapstack.stamen.com/" +
         "(toner-lite,$fff[difference],$fff[@23],$fff[hsl-saturation@20])/" +
         "{z}/{x}/{y}.png",
         {
