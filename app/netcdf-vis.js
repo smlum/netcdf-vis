@@ -2,26 +2,31 @@
 
 function initDemoMap(){
 
+    // Old baselayers
+    /*
     var Esri_WorldImagery = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
-        attribution: ''
+        attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ, TomTom, Intermap, iPC, USGS, FAO, ' +
+        'NPS, NRCAN, GeoBase, Kadaster NL, Ordnance Survey, Esri Japan, METI, Esri China (Hong Kong), and the GIS User Community'
     });
-
-    //var OpenStreetMap_Mapnik = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    	//maxZoom: 19,
-    	//attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-    //});
-
+    var OpenStreetMap_Mapnik = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    	maxZoom: 19,
+    	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    });
     var Esri_DarkGreyCanvas = L.tileLayer(
         "https://{s}.sm.mapstack.stamen.com/" +
         "(toner-lite,$fff[difference],$fff[@23],$fff[hsl-saturation@20])/" +
         "{z}/{x}/{y}.png",
         {
-            attribution: ''
+            attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ, TomTom, Intermap, iPC, USGS, FAO, ' +
+            'NPS, NRCAN, GeoBase, Kadaster NL, Ordnance Survey, Esri Japan, METI, Esri China (Hong Kong), and the GIS User Community'
         }
     );
-    var attribution = 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ, TomTom, Intermap, iPC, USGS, FAO, ' +
-    'NPS, NRCAN, GeoBase, Kadaster NL, Ordnance Survey, Esri Japan, METI, Esri China (Hong Kong), and the GIS User Community';
 
+    */
+
+    // New baselayers
+    var Esri_DarkGreyCanvas = L.esri.basemapLayer('DarkGray')
+    var Esri_WorldImagery = L.esri.basemapLayer('Imagery')
     var baseLayers = {
         "Grey Canvas": Esri_DarkGreyCanvas,
         "Satellite": Esri_WorldImagery,
@@ -67,13 +72,12 @@ function initDemoMap(){
 
 }
 
-// demo map
+// leaflet-velocity layer
 var mapStuff = initDemoMap();
 var map = mapStuff.map;
 var layerControl = mapStuff.layerControl;
 
 // load data (u, v grids) from somewhere (e.g. https://github.com/danwild/wind-js-server)
-// try out a new json layer
 $.getJSON('data/wind.json', function (data) {
 
 	var velocityLayer = L.velocityLayer({
