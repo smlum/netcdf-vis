@@ -2,7 +2,7 @@
 
 `netcdf-vis` is a web application that extracts netCDF data and visualises it on a web map.
 
-Live demo: [https://samfredlumley.github.io/netcdf-vis/app/](https://samfredlumley.github.io/netcdf-vis/app/)
+Live demo: [https://smlum.github.io/netcdf-vis/app/](https://smlum.github.io/netcdf-vis/app/)
 
 
 ## Using the app
